@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 
 // Defining the interface for the props passed to the ShortenForm component
 interface ShortenFormProps {
-  handleUrlShortened: (newUrl: Url) => void; // Function to handle the shortened URL from the API
+  handleUrlShortened: (newUrl: URL) => void; // Function to handle the shortened URL from the API
 }
 
 // The ShortenForm component allows users to input a URL and shorten it

@@ -12,7 +12,7 @@ const PrivacyPolicy: React.FC = () => {
         <section className="space-y-6">
           <h2 className="text-xl font-semibold text-gray-800">1. Information We Collect</h2>
           <p>
-            When you use CutLite  URL shortening service, we collect the following information:
+            When you use CutLite s URL shortening service, we collect the following information:
           </p>
           <ul className="list-disc pl-6 space-y-2">
             <li>The original URL you wish to shorten</li>
@@ -55,7 +55,14 @@ const PrivacyPolicy: React.FC = () => {
         <section className="space-y-6">
           <h2 className="text-xl font-semibold text-gray-800">6. Changes to This Privacy Policy</h2>
           <p>
-            We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the last updated date at the top of this Privacy Policy...
+            We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the last updated date at the top of this Privacy Policy.
+          </p>
+        </section>
+
+        <section className="space-y-6">
+          <h2 className="text-xl font-semibold text-gray-800">7. Contact Us</h2>
+          <p>
+            If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:privacy@cutlite.com" className="text-blue-600">privacy@cutlite.com</a>
           </p>
         </section>
       </div>
@@ -64,3 +71,5 @@ const PrivacyPolicy: React.FC = () => {
 };
 
 export default PrivacyPolicy;
+
+

@@ -44,8 +44,8 @@ const Footer: React.FC = () => {
             </p>
             <a
               onClick={() => handleScroll("heroSection")}
-            className="mt-8 inline-block rounded-full cursor-pointer border border-blue-500 px-12 py-3 text-sm font-medium text-blue-500 hover:bg-blue-500  focus:outline-none focus:ring active:bg-indigo-500 transition-all before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500 hover:text-white hover:shadow-blue-400 hover:before:w-2/4 hover:before:bg-blue-400 hover:after:w-2/4 hover:after:bg-blue-400"
-              >
+              className="mt-8 inline-block rounded-full cursor-pointer border border-blue-500 px-12 py-3 text-sm font-medium text-blue-500 hover:bg-blue-500  focus:outline-none focus:ring active:bg-indigo-500 transition-all before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500 hover:text-white hover:shadow-blue-400 hover:before:w-2/4 hover:before:bg-blue-400 hover:after:w-2/4 hover:after:bg-blue-400"
+            >
               Get Started
             </a>
           </div>
@@ -88,7 +88,10 @@ const Footer: React.FC = () => {
                       href={`#${link.id}`}
                       onClick={(e) => {
                         e.preventDefault();
-                        handleScroll(link.id);
+                        // Ensure that `id` is not undefined before calling `handleScroll`
+                        if (link.id) {
+                          handleScroll(link.id);
+                        }
                       }}
                       className="text-gray-500 transition hover:opacity-75"
                     >
@@ -105,11 +108,10 @@ const Footer: React.FC = () => {
       {/* Modal for Terms and Conditions */}
       {showTerms && (
         <motion.div
-        className="w-full fixed inset-0 z-50 flex items-center justify-center bg-white py-8 overflow-y-auto
-        scrollbar-thin scrollbar-thumb-rounded-full scrollbar-thumb-gray-300
-        scrollbar-track-rounded-full scrollbar-track-white
-        dark:scrollbar-track-neutral-700 dark:scrollbar-thumb-neutral-500"
-      
+          className="w-full fixed inset-0 z-50 flex items-center justify-center bg-white py-8 overflow-y-auto
+          scrollbar-thin scrollbar-thumb-rounded-full scrollbar-thumb-gray-300
+          scrollbar-track-rounded-full scrollbar-track-white
+          dark:scrollbar-track-neutral-700 dark:scrollbar-thumb-neutral-500"
           variants={modalVariants}
           initial="initial"
           animate="animate"
@@ -131,9 +133,9 @@ const Footer: React.FC = () => {
       {showPolicy && (
         <motion.div
           className="w-full fixed inset-0 z-50 flex items-center justify-center bg-white py-8 overflow-y-auto
-        scrollbar-thin scrollbar-thumb-rounded-full scrollbar-thumb-gray-300
-        scrollbar-track-rounded-full scrollbar-track-white
-        dark:scrollbar-track-neutral-700 dark:scrollbar-thumb-neutral-500"
+          scrollbar-thin scrollbar-thumb-rounded-full scrollbar-thumb-gray-300
+          scrollbar-track-rounded-full scrollbar-track-white
+          dark:scrollbar-track-neutral-700 dark:scrollbar-thumb-neutral-500"
           variants={modalVariants}
           initial="initial"
           animate="animate"
