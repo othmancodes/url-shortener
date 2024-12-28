@@ -1,12 +1,12 @@
 {
     "builds": [
-      {
-        "src": "package.json",
-        "use": "@vercel/node",
-        "config": {
-          "includeFiles": ["prisma/**"]
-        }
-      }
+        {
+            "src": "package.json",
+            "use": "@vercel/node",
+            "config": {
+              "includeFiles": ["prisma/**"]
+            }
+          }
     ],
     "build": {
       "env": {
@@ -17,4 +17,3 @@
       }
     }
   }
-  

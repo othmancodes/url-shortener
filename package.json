@@ -4,14 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build --no-lint",
+    "build": "npm run prisma-generate && next build --no-lint",
     "prisma-generate": "prisma generate",
     "start": "next start",
     "lint": "next lint",
     "test": "jest"
   },
   "dependencies": {
-    "@prisma/client": "^5.20.0",
+    "@prisma/client": "^6.1.0",
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@tabler/icons-react": "^3.22.0",
@@ -38,7 +38,7 @@
     "eslint-config-next": "14.2.15",
     "node-mocks-http": "^1.16.1",
     "postcss": "^8",
-    "prisma": "^5.20.0",
+    "prisma": "^6.1.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },
