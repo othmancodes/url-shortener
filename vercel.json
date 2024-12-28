@@ -1,19 +1,15 @@
 {
     "builds": [
-        {
-            "src": "package.json",
-            "use": "@vercel/node",
-            "config": {
-              "includeFiles": ["prisma/**"]
-            }
-          }
-    ],
-    "build": {
-      "env": {
-        "DATABASE_URL": "postgresql://postgres:othmanbenyahya@localhost:5432/url-db?schema=public"
-      },
-      "commands": {
-        "build": "npm run prisma-generate && next build"
+      {
+        "src": "package.json",
+        "use": "@vercel/node",
+        "config": {
+          "includeFiles": ["prisma/**"]
+        }
       }
+    ],
+    "env": {
+      "DATABASE_URL": "postgresql://postgres:othmanbenyahya@localhost:5432/url-db?schema=public"
     }
   }
+  

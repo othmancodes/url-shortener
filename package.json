@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run prisma-generate && next build --no-lint",
     "prisma-generate": "prisma generate",
+    "build": "prisma generate && next build --no-lint",
     "start": "next start",
     "lint": "next lint",
     "test": "jest"
@@ -41,6 +41,9 @@
     "prisma": "^6.1.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "prisma": {
+    "schema": "./prisma/schema.prisma"
   },
   "type": "module"
 }
