@@ -12,14 +12,14 @@ const TermsConditions: React.FC = () => {
         <section className="space-y-6">
           <h2 className="text-xl font-semibold text-gray-800">1. Acceptance of Terms</h2>
           <p>
-            By accessing and using URLW (the "Service"), you accept and agree to be bound by the terms and provision of this agreement.
+            By accessing and using CutLite (the Service), you accept and agree to be bound by the terms and provision of this agreement.
           </p>
         </section>
 
         <section className="space-y-6">
           <h2 className="text-xl font-semibold text-gray-800">2. Description of Service</h2>
           <p>
-            URLW provides a URL shortening service for social media and video platform links. We do not allow shortening of links from other websites.
+            CutLite provides a URL shortening service for social media and video platform links. We do not allow shortening of links from other websites.
           </p>
         </section>
 
@@ -52,7 +52,7 @@ const TermsConditions: React.FC = () => {
         <section className="space-y-6">
           <h2 className="text-xl font-semibold text-gray-800">6. Limitation of Liability</h2>
           <p>
-            In no event shall URLW, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.
+            In no event shall CutLite, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.
           </p>
         </section>
 
