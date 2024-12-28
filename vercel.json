@@ -1,15 +1,12 @@
 {
-    "builds": [
-      {
-        "src": "package.json",
-        "use": "@vercel/node",
-        "config": {
-          "includeFiles": ["prisma/**"]
-        }
-      }
-    ],
     "env": {
-      "DATABASE_URL": "postgresql://postgres:othmanbenyahya@localhost:5432/url-db?schema=public"
-    }
+      "DATABASE_URL": "postgresql://username:password@host:port/database?schema=public"
+    },
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/"
+      }
+    ]
   }
   
