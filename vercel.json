@@ -13,10 +13,5 @@
       "src": "/(.*)",
       "dest": "/"
     }
-  ],
-  "includeFiles": [
-    "prisma/schema.prisma",
-    "prisma/migrations/**",
-    "prisma/*.prisma"
   ]
 }
