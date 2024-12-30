@@ -8,11 +8,6 @@
   "env": {
     "DATABASE_URL": "postgresql://postgres:othmanbenyahya@localhost:5432/url-db?schema=public"
   },
-  "functions": {
-    "api/**/*.ts": {
-      "runtime": "nodejs18.x"
-    }
-  },
   "routes": [
     {
       "src": "/(.*)",
