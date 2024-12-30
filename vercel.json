@@ -1,15 +1,27 @@
 {
-    "builds": [
-      {
-        "src": "package.json",
-        "use": "@vercel/node",
-        "config": {
-          "includeFiles": ["prisma/**"]
-        }
-      }
-    ],
-    "env": {
-      "DATABASE_URL": "postgresql://postgres:othmanbenyahya@localhost:5432/url-db?schema=public"
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@vercel/next"
     }
-  }
-  
+  ],
+  "env": {
+    "DATABASE_URL": "postgresql://postgres:othmanbenyahya@localhost:5432/url-db?schema=public"
+  },
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+  "includeFiles": [
+    "prisma/schema.prisma",
+    "prisma/migrations/**",
+    "prisma/*.prisma"
+  ]
+}
