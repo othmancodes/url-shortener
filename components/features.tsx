@@ -58,7 +58,7 @@ export function Features() {
               You want your audience to access your content instantly, without any obstacles. That’s where CutLite comes in. Our smart, shortened links are designed to provide the best possible experience – fast, simple, and without any distractions.
             </p>
             <span
-              className="border border-blue-500 text-blue-500 px-9 py-2 rounded-full text-sm md:text-base lg:text-sm cursor-pointer hover:bg-blue-500 hover:text-white focus:outline-none focus:ring active:bg-indigo-500 hover:before:w-2/4 hover:before:bg-blue-400 hover:after:w-2/4 hover:after:bg-blue-400 transition-all before:absolute before:left-0 before:top-0 before:h-full before:w-0 after:absolute after:right-0 after:top-0 after:h-full after:w-0 duration-500"
+              className="border border-blue-500 text-blue-500 px-9 py-2 rounded-full text-sm md:text-base lg:text-sm cursor-pointer hover:bg-blue-500 hover:text-white "
               onClick={() => handleScroll("heroSection")}
             >
               Get Started

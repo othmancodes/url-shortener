@@ -39,7 +39,7 @@ export default function UrlList({ urls }: UrlListProps) {
         {urls && urls.length > 0 ? (
           urls.map((url) => (
             <motion.li
-              key={url.id}
+              key={`${url.id}-${url.shortCode}`}  // Combining id and shortCode for uniqueness
               className="flex items-center gap-2 justify-between bg-card rounded-md text-card-foreground p-3"
               style={{
                 boxShadow: "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px",
@@ -73,3 +73,4 @@ export default function UrlList({ urls }: UrlListProps) {
     </div>
   );
 }
+

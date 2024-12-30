@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { CircleX } from "lucide-react"; // Import the CircleX icon
-import { motion } from "framer-motion"; // Import motion for animations
 import TermsConditions from "./termsConditions";
 import PrivacyPolicy from "./privacyPolicy";
 
@@ -25,11 +24,7 @@ const Footer: React.FC = () => {
   ];
 
   // Modal transition settings
-  const modalVariants = {
-    initial: { opacity: 0, scale: 0.8 },
-    animate: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-    exit: { opacity: 0, scale: 0.8, transition: { duration: 0.3 } },
-  };
+
 
   return (
     <>
@@ -44,7 +39,7 @@ const Footer: React.FC = () => {
             </p>
             <a
               onClick={() => handleScroll("heroSection")}
-              className="mt-8 inline-block rounded-full cursor-pointer border border-blue-500 px-12 py-3 text-sm font-medium text-blue-500 hover:bg-blue-500  focus:outline-none focus:ring active:bg-indigo-500 transition-all before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500 hover:text-white hover:shadow-blue-400 hover:before:w-2/4 hover:before:bg-blue-400 hover:after:w-2/4 hover:after:bg-blue-400"
+              className="mt-8 inline-block rounded-full cursor-pointer border border-blue-500 px-12 py-3 text-sm font-medium text-blue-500 hover:bg-blue-500 hover:text-white  "
             >
               Get Started
             </a>
@@ -107,16 +102,7 @@ const Footer: React.FC = () => {
 
       {/* Modal for Terms and Conditions */}
       {showTerms && (
-        <motion.div
-          className="w-full fixed inset-0 z-50 flex items-center justify-center bg-white py-8 overflow-y-auto
-          scrollbar-thin scrollbar-thumb-rounded-full scrollbar-thumb-gray-300
-          scrollbar-track-rounded-full scrollbar-track-white
-          dark:scrollbar-track-neutral-700 dark:scrollbar-thumb-neutral-500"
-          variants={modalVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-        >
+
           <div className="relative bg-white rounded-lg w-full max-w-3xl p-6 max-h-full">
             <button
               onClick={() => setShowTerms(false)}
@@ -126,21 +112,11 @@ const Footer: React.FC = () => {
             </button>
             <TermsConditions />
           </div>
-        </motion.div>
       )}
 
       {/* Modal for Privacy Policy */}
       {showPolicy && (
-        <motion.div
-          className="w-full fixed inset-0 z-50 flex items-center justify-center bg-white py-8 overflow-y-auto
-          scrollbar-thin scrollbar-thumb-rounded-full scrollbar-thumb-gray-300
-          scrollbar-track-rounded-full scrollbar-track-white
-          dark:scrollbar-track-neutral-700 dark:scrollbar-thumb-neutral-500"
-          variants={modalVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-        >
+
           <div className="relative bg-white rounded-lg w-full max-w-3xl p-6 max-h-full">
             <button
               onClick={() => setShowPolicy(false)}
@@ -150,7 +126,6 @@ const Footer: React.FC = () => {
             </button>
             <PrivacyPolicy />
           </div>
-        </motion.div>
       )}
     </>
   );

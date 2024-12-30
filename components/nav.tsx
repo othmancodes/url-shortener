@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
               {/* Button to scroll to the respective section */}
               <button
                 onClick={() => handleScroll(item.id)}
-                className="font-medium text-lg p-1 text-black transition hover:text-gray-400"
+                className="font-medium text-base p-1 text-black transition hover:text-gray-400"
               >
                 {item.name}
               </button>
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } lg:hidden mt-2 rounded-xl bg-white py-2 transition-all duration-300 ease-in-out`}
+        } lg:hidden  mt-2 rounded-xl  py-2 transition-all duration-300 ease-in-out`}
       >
         <ul className="flex flex-col gap-3">
           {menuItems.map((item) => (
