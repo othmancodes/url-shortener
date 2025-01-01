@@ -23,9 +23,6 @@ const Footer: React.FC = () => {
     { name: "Privacy Policy", href: "/privacyPolicy" },
   ];
 
-  // Modal transition settings
-
-
   return (
     <>
       <footer className="bg-white">
@@ -39,7 +36,7 @@ const Footer: React.FC = () => {
             </p>
             <a
               onClick={() => handleScroll("heroSection")}
-              className="mt-8 inline-block rounded-full cursor-pointer border border-blue-500 px-12 py-3 text-sm font-medium text-blue-500 hover:bg-blue-500 hover:text-white  "
+              className="mt-8 inline-block rounded-full cursor-pointer border border-blue-500 px-12 py-3 text-sm font-medium text-blue-500 hover:bg-blue-500 hover:text-white"
             >
               Get Started
             </a>
@@ -57,41 +54,26 @@ const Footer: React.FC = () => {
               {footerLinks.map((link) => (
                 <li key={link.name}>
                   {link.href === "/termsConditions" ? (
-                    <a
-                      href="#"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setShowTerms(true);
-                      }}
+                    <button
+                      onClick={() => setShowTerms(true)}
                       className="text-gray-500 transition hover:opacity-75"
                     >
                       {link.name}
-                    </a>
+                    </button>
                   ) : link.href === "/privacyPolicy" ? (
-                    <a
-                      href="#"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setShowPolicy(true);
-                      }}
+                    <button
+                      onClick={() => setShowPolicy(true)}
                       className="text-gray-500 transition hover:opacity-75"
                     >
                       {link.name}
-                    </a>
+                    </button>
                   ) : (
-                    <a
-                      href={`#${link.id}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        // Ensure that `id` is not undefined before calling `handleScroll`
-                        if (link.id) {
-                          handleScroll(link.id);
-                        }
-                      }}
+                    <button
+                      onClick={() => handleScroll(link.id!)}
                       className="text-gray-500 transition hover:opacity-75"
                     >
                       {link.name}
-                    </a>
+                    </button>
                   )}
                 </li>
               ))}
@@ -102,7 +84,7 @@ const Footer: React.FC = () => {
 
       {/* Modal for Terms and Conditions */}
       {showTerms && (
-
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white overflow-auto">
           <div className="relative bg-white rounded-lg w-full max-w-3xl p-6 max-h-full">
             <button
               onClick={() => setShowTerms(false)}
@@ -112,11 +94,12 @@ const Footer: React.FC = () => {
             </button>
             <TermsConditions />
           </div>
+        </div>
       )}
 
       {/* Modal for Privacy Policy */}
       {showPolicy && (
-
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white overflow-auto">
           <div className="relative bg-white rounded-lg w-full max-w-3xl p-6 max-h-full">
             <button
               onClick={() => setShowPolicy(false)}
@@ -126,6 +109,7 @@ const Footer: React.FC = () => {
             </button>
             <PrivacyPolicy />
           </div>
+        </div>
       )}
     </>
   );

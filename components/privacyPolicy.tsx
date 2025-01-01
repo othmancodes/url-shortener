@@ -4,7 +4,7 @@ const PrivacyPolicy: React.FC = () => {
   return (
     <section className=" min-h-screen flex items-center justify-center">
       <div className="max-w-4xl mx-auto p-6 space-y-8 text-gray-900 ">
-        <header className="text-center">
+        <header className="">
           <h1 className="text-3xl font-semibold text-blue-600">Privacy Policy</h1>
           <p className="text-sm text-gray-500">Last updated: December 21, 2024</p>
         </header>

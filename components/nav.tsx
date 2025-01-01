@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Menu, ScissorsLineDashed } from "lucide-react"; // Importing icons for the navbar
+import { Menu, ScissorsLineDashed, CircleX } from "lucide-react"; // Importing the Close icon
 
 // Menu items for the navigation links
 const menuItems = [
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
           onClick={toggleMenu}
           className="lg:hidden flex items-center justify-center w-8 h-8 rounded-lg text-black hover:bg-gray-200 transition"
         >
-          <Menu size={32} /> {/* Menu icon for mobile */}
+          {isOpen ? <CircleX size={32} /> : <Menu size={32} />} {/* Conditional icon rendering */}
         </button>
       </div>
 
@@ -101,5 +101,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-
-
